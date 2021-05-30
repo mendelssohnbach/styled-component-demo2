@@ -138,5 +138,25 @@ import { AppContainer } from './Components/Container.style';
 
 ![innerText](./images/styled-components003.png)
 
+## 疑似要素
 
+```js
+// Button.style.js
+  &:hover {
+    & label {
+      color: tomato;
+    }
+```
+
+```js
+// App.js
+      <Button backgroundColor="orange">Click this Button!</Button>
+      <Button backgroundColor="orange">
+        <ButtonLabel>Click this Button!</ButtonLabel>
+      </Button>
+```
+
+`<ButtonLabel>`コンポーネントのボタンラベルにスタイルが適用される。
+
+`<Button>`コンポーネントのボタンラベルはスタイル変化なし
 
