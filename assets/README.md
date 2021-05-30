@@ -211,5 +211,33 @@ propsの多段受け渡しは、中間のコンポーネントでは、`props`�
 
 ![アトリビュート](./images/styled-components004.png)
 
+## グローバルスタイル
 
+すべてのコンポーネントで基本的スタイルを適用させる。**CSSリセット**のような使い方
 
+```js
+// GlobalSytles.style.jsx
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyles = createGlobalStyle`
+  body {
+    background-color: indigo;
+    margin: 0;
+    padding: 0;
+  }
+`;
+```
+
+```js
+// App.js
+import { GlobalStyles } from './Components/GlobalSytles.style';
+
+function App() {
+  return (
+    <AppContainer>
+      <GlobalStyles />
+      <StyledButton buttonLabel="Click Here" background="violet"></StyledButton>
+    </AppContainer>
+  );
+}
+```
