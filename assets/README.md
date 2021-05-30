@@ -108,6 +108,17 @@ export default App;
 ![コンポーネント](./images/styled-components002.png)
 
 
+## 疑似要素にスタイル適用
+
+```js
+// Button.style.jsx
+  &:hover {
+    background-color: coral;
+  }
+  &:active {
+    background-color: wheat;
+  }
+```
 
 
 
