@@ -196,4 +196,20 @@ const Button = ({ buttonLabel }) => {
 export default Button;
 ```
 
+propsの多段受け渡しは、中間のコンポーネントでは、`props`のアトリビュート名が一致している必要がある。
+
+```js
+// App.js
+<StyledButton buttonLabel="Click Here" background="violet"></StyledButton>
+```
+
+```js
+// Button.style.js
+...
+  background-color: ${(props) => props.background};
+```
+
+![アトリビュート](./images/styled-components004.png)
+
+
 

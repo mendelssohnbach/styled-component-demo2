@@ -1,7 +1,7 @@
-const Button = ({ buttonLabel }) => {
+const Button = ({ className, buttonLabel }) => {
   return (
     <div>
-      <button>{buttonLabel}</button>
+      <button className={className}>{buttonLabel}</button>
     </div>
   );
 };

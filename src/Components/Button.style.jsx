@@ -4,7 +4,7 @@ import Button from './Button';
 export const StyledButton = styled(Button)`
   width: 200px;
   height: 50px;
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${(props) => props.background};
 
   &:hover {
     color: aqua;
