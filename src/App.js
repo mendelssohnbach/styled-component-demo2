@@ -1,11 +1,10 @@
-import { RedButton, GreenButton, BlueButton } from './Components/Button.style';
+import { Button } from './Components/Button.style';
 
 function App() {
   return (
     <div className="App">
-      <RedButton>Click this Button!</RedButton>
-      <BlueButton>Click this Button!</BlueButton>
-      <GreenButton>Click this Button!</GreenButton>
+      <Button backgroundColor="red">Click this Button!</Button>
+      <Button backgroundColor="orange">Click this Button!</Button>
     </div>
   );
 }

@@ -14,6 +14,8 @@ $ npm ls
 └── web-vitals@1.1.2
 ```
 
+## 3つ3色のボタンを表示
+
 ```js
 //Button.style.jsx
 import styled from 'styled-components';
@@ -51,3 +53,24 @@ export default App;
 ```
 
 ![Button](./images/styled-components001.png)
+
+## ボタン色をpropsで渡す
+
+```js
+// Button.style.jsx
+import styled from 'styled-components';
+
+export const Button = styled.button`
+  width: 200px;
+  height: 50px;
+  background-color: ${(props) => props.backgroundColor};
+`;
+```
+
+```js
+// App.js
+      <Button backgroundColor="red">Click this Button!</Button>
+      <Button backgroundColor="orange">Click this Button!</Button>
+```
+
+
