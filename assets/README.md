@@ -161,3 +161,39 @@ import { AppContainer } from './Components/Container.style';
 `<Button>`コンポーネントのボタンラベルはスタイル変化なし
 
 `& label`がキモ！
+
+`App`コンポーネントに`StyledButton`を組み込む
+
+```js
+// App.js
+import { StyledButton } from './Components/Button.style';
+...
+<StyledButton buttonLabel="Click Here" background="violet"></StyledButton>
+```
+
+`StyledButton`は`styled(Button)`を内包している。
+
+```js
+// Button.style
+import styled from 'styled-components';
+import Button from './Button';
+
+export const StyledButton = styled(Button)`
+```
+
+`App`コンポーネントの`props`属性`buttonLabel="Click Here"`は、`Button.jsx`がレンダリングする。
+
+```js
+// Button.jsx
+const Button = ({ buttonLabel }) => {
+  return (
+    <div>
+      <button>{buttonLabel}</button>
+    </div>
+  );
+};
+
+export default Button;
+```
+
+
