@@ -12,3 +12,8 @@ export const Button = styled.button`
     background-color: wheat;
   }
 `;
+
+export const ButtonLabel = styled.label`
+  font-size: 20px;
+  color: gray;
+`;

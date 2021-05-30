@@ -120,5 +120,23 @@ export default App;
   }
 ```
 
+## innerTextにスタイル適用
+
+```js
+// Button.style.jsx
+export const ButtonLabel = styled.label`
+  font-size: 20px;
+  color: gray;
+```
+
+```js
+// App.js
+import { AppContainer } from './Components/Container.style';
+...
+<ButtonLabel>Click this Button!</ButtonLabel>
+```
+
+![innerText](./images/styled-components003.png)
+
 
 
