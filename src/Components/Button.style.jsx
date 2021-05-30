@@ -6,6 +6,7 @@ export const Button = styled.button`
   background-color: ${(props) => props.backgroundColor};
 
   &:hover {
+    color: aqua;
     & label {
       color: tomato;
     }
