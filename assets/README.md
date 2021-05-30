@@ -73,4 +73,41 @@ export const Button = styled.button`
       <Button backgroundColor="orange">Click this Button!</Button>
 ```
 
+## コンポーネントにスタイル適用
+
+これまではコンポーネントの内部のエレメントにスタイルを適用していた。コンポーネント自体にスタイルを適用することもできる。
+
+```js
+// Container.style.jsx
+import styled from 'styled-components';
+
+export const AppContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-color: lightblue;
+`;
+```
+
+```js
+// App.js
+import { Button } from './Components/Button.style';
+import { AppContainer } from './Components/Container.style';
+
+function App() {
+  return (
+    <AppContainer>
+      <Button backgroundColor="red">Click this Button!</Button>
+      <Button backgroundColor="orange">Click this Button!</Button>
+    </AppContainer>
+  );
+}
+
+export default App;
+```
+
+![コンポーネント](./images/styled-components002.png)
+
+
+
+
 
